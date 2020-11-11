@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 from flask import Flask, request,jsonify,render_template
 import pickle
-import requests
 import math
 
 app=Flask(__name__)
@@ -20,4 +19,4 @@ def predict():
     return render_template('index.html',prediction_text="Number of Weekly Rides Should be {}".format(math.floor(output)))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
